@@ -4,8 +4,4 @@ $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 $query =  $db->prepare("SELECT `name`, `designer`, `style`, `year_released` FROM `items` ORDER BY `id`;");
 $query->execute();
 $results = $query->fetchAll();
-
-echo '<pre>';
-var_dump($results);
-echo '</pre>';
 ?>
