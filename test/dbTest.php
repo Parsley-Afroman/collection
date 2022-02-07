@@ -1,4 +1,5 @@
 <?php
+require '../db.php';
 function getDb(): object {
     return new PDO ('mysql:host=db; dbname=sami-collection','root', 'password');
 }
