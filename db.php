@@ -11,7 +11,7 @@ function getItems(object $db): array {
 function arraySplit(array $items) : string{
     $result = '';
     foreach ($items as $item){
-        $result .= '<div><img src="'. $item['image'] . '" alt="garment image"></div>';
+        $result .= '<div><img src="'. $item['image'] . '" alt="garment image" width="500" height="500"></div>';
         $result .= '<div>' . $item['name'] . '</div>';
         $result .= '<div>' . $item['designer'] . '</div>';
         $result .= '<div>' . $item['style'] . '</div>';
@@ -23,7 +23,7 @@ function arraySplit(array $items) : string{
 }
 
 
-//$db = getDb();
-//$array = getItems($db);
-//$items = arraySplit($array);
+$db = getDb();
+$array = getItems($db);
+$items = arraySplit($array);
 ?>
