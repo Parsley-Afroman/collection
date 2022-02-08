@@ -10,40 +10,59 @@ function getItems(object $db): array {
 }
 function arraySplit(array $items) : string{
     $result = '';
-    if (COUNT($items) <= 0) {
-        echo 'there aren\'t any database items to present';
+    if (!count($items)) {
+        $result .= '<div>' . 'there aren\'t any database items to present' . '<div>';
     } else {
         foreach ($items as $item) {
-            if (!$item['image']) {
-                $result .= 'there is no image to present at this time';
+            if (!isset($item['image'])){
+                $result .= '<div>' . 'no image' . '<div>';
             } else {
-                $result .= '<div><img src="'. $item['image'] . '" alt="garment image" width="500" height="500"></div>';
+                if (!$item['image']) {
+                    $result .= '<div>' . 'there is no image to present at this time' . '<div>';
+                } else {
+                    $result .= '<div><img src="'. $item['image'] . '" alt="garment image" width="500" height="500"></div>';
+                }
             }
-            if (!$item['name']) {
-                $result .= 'there isn\'t a name for this item';
+            if (!isset($item['name'])){
+                $result .= '<div>' . 'no name' . '<div>';
             } else {
-                $result .= '<div>' . $item['name'] . '</div>';
+                if (!$item['name']) {
+                    $result .= '<div>' . 'there isn\'t a name for this item' . '<div>';
+                } else {
+                    $result .= '<div>' . $item['name'] . '</div>';
+                }
             }
-            if (!$item['designer']) {
-                echo 'the designer of this garment is not yet known';
+            if (!isset($item['designer'])){
+                $result .= '<div>' . 'no designer' . '<div>';
             } else {
-                $result .= '<div>' . $item['designer'] . '</div>';
+                if (!$item['designer']) {
+                    $result .= '<div>' . 'the designer of this garment is not yet known' . '<div>';
+                } else {
+                    $result .= '<div>' . $item['designer'] . '</div>';
+                }
             }
-            if (!$item['style']) {
-                echo 'the style of this garment is not yet known';
+            if (!isset($item['style'])){
+                $result .= '<div>' . 'no style' . '<div>';
             } else {
-                $result .= '<div>' . $item['style'] . '</div>';
+                if (!$item['style']) {
+                    $result .= '<div>' . 'the style of this garment is not yet known' . '<div>';
+                } else {
+                    $result .= '<div>' . $item['style'] . '</div>';
+                }
             }
-            if($item['year_released'] <= date("Y")) {
-                $result .= '<div>' . $item['year_released'] . '</div>';
-            } else { $result .= 'select a year that isn\'t in the future';}
+            if (!isset($item['year_released'])){
+                $result .= '<div>' . 'no year' . '<div>';
+            } else {
+                if($item['year_released'] <= date("Y")) {
+                    $result .= '<div>' . $item['year_released'] . '</div>';
+                } else {
+                    $result .= '<div>' . 'select a year that isn\'t in the future' . '<div>';
+                }
+            }
         }
     }
     return $result;
 }
 
 
-//$db = getDb();
-//$array = getItems($db);
-//$items = arraySplit($array);
 ?>

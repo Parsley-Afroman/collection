@@ -11,7 +11,8 @@ class dbTest extends TestCase {
     }
     public function testFailureLoop(){
         $array = [['name' => '', 'designer' => '', 'style' => '', 'year_released' => 2035, 'image' => '']];
-        $expected = 'there is no image to present at this timethere isn\'t a name for this itemselect a year that isn\'t in the future';
+        $expected = '<div>there is no image to present at this time<div><div>there isn\'t a name for this item<div><div>the designer of this garment is not yet known<div><div>the style of this garment is not yet known<div><div>select a year that isn\'t in the future<div>'
+        ;
         $inputA = $array;
         $case = arraySplit($inputA);
         $this->assertEquals($expected, $case);
@@ -21,6 +22,12 @@ class dbTest extends TestCase {
         $inputA = $array;
         $this->expectException(TypeError::class);
         arraySplit($inputA);
+    }
+    public function testNoContent(){
+        $array = [];
+        $expected = '<div>there aren\'t any database items to present<div>';
+        $case = arraySplit($array);
+        $this->assertEquals($expected, $case);
     }
 }
 ?>

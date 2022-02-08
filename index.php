@@ -1,5 +1,8 @@
 <?php
 require_once 'db.php';
+$db = getDb();
+$array = getItems($db);
+$items = arraySplit($array);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +14,8 @@ require_once 'db.php';
 </header>
 <body>
     <main>
-        <?php echo $items ?>
+        <?php echo $items;
+        ?>
     </main>
 </body>
 </html>
