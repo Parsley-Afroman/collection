@@ -11,8 +11,7 @@ class dbTest extends TestCase {
     }
     public function testFailureLoop(){
         $array = [['name' => '', 'designer' => '', 'style' => '', 'year_released' => 2035, 'image' => '']];
-        $expected = '<div class="item"><div> class = "empty"there is no image to present at this time</div><div class = "empty">there isn\'t a name for this item</div><div class = "empty">the designer of this garment is not yet known</div><div class = "empty">the style of this garment is not yet known</div><div class = "empty">select a year that isn\'t in the future</div>'
-        ;
+        $expected = '<div class="item"><div class = "empty">there is no image to present at this time</div><div class = "empty">there isn\'t a name for this item</div><div class = "empty">the designer of this garment is not yet known</div><div class = "empty">the style of this garment is not yet known</div><div class = "empty">select a year that isn\'t in the future</div>';
         $inputA = $array;
         $case = arraySplit($inputA);
         $this->assertEquals($expected, $case);
