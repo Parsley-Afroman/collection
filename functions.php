@@ -61,4 +61,32 @@ function jacketMarkup(array $jackets) : string{
         }
     return $result;
 }
+
+function entryCheck($name, $designer, $style, $year){
+    if (!$name){
+        $nameOutput = '';
+    } else {
+        $nameOutput = $name;
+    }if (!$designer){
+        $designOutput = '';
+    } else {
+        $designOutput = $name;
+    }
+    if (!$style){
+        $styleOutput = '';
+    } else {
+        $styleOutput = $style;
+    }
+    if (!$year){
+        $yearOutput = '';
+    } else {
+        $yearOutput = $year;
+    }
+
+    $output[] = $nameOutput;
+    $output[] = $designOutput;
+    $output[] = $styleOutput;
+    $output[] = $yearOutput;
+    return $output;
+}
 ?>

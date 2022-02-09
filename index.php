@@ -3,9 +3,6 @@ require_once 'functions.php';
 $db = getDb();
 $array = getAllJackets($db);
 $items = jacketMarkup($array);
-if (isset($_SESSION)){
-
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +21,7 @@ if (isset($_SESSION)){
         <?php echo $items;
         ?>
     </main>
-    <footer>
+        <footer>
         <form name="add_jacket" method="post" action="directory.php">
             <input name="jacket_name" type="text" placeholder="Jacket Name"> . <br>
             <input name="jacket_designer" type="text" placeholder="Jacket Designer"> . <br>
