@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.7.37)
 # Database: sami-collection
-# Generation Time: 2022-02-09 14:11:21 +0000
+# Generation Time: 2022-02-09 14:34:55 +0000
 # ************************************************************
 
 
@@ -48,7 +48,7 @@ VALUES
 	(4,'Python Leather College Bomber Tattoo Patches','Philipp Plein','bomber',13025,'https://www.plein.com/gb/python-leather-college-bomber-tattoo-patches/SABC-MLB1473-PLE029P_02.html?cgid=men-clothing-outerwear_and_coats#cgid=men-clothing-outerwear_and_coats&pmin=1.00&prefn1=hasPicture&prefv1=true&start=4','https://www.plein.com/dw/image/v2/BBKQ_PRD/on/demandware.static/-/Sites-plein-master-catalog/default/dw3608ecbe/images/rollover/SABC-MLB1473-PLE029P_02_r.jpg?sw=440&sh=560','2022'),
 	(5,'Come Out Fighting','Pelle Pelle','bomber',800,'https://www.grailed.com/listings/27565041-pelle-pelle-pelle-pelle-leather-jacket-size-40','https://process.fs.grailed.com/AJdAgnqCST4iPtnUxiGtTz/auto_image/cache=expiry:max/rotate=deg:exif/resize=height:1400/output=quality:90/compress/https://cdn.fs.grailed.com/api/file/WAEwtolTQSfZ11ieoybb','2015'),
 	(6,'KOMAINU JAPANESE PRINT','Evisu','denim',455,'https://www.miinto.co.uk/p-komainu-japanese-print-e0438aee-4045-49ee-b0ee-ae3501230720?gclid=CjwKCAiA6Y2QBhAtEiwAGHybPY7gOKemp4be0ldprLcEC54YmfncIK5CrtliV0K9n3OqUXIfVNEiHRoCur0QAvD_BwE','https://static.miinto.net/products/b4b2f541ae0f5c4027b8dd02069fe555.jpg?width=400&height=600&title=komainu-japanese-print','2022'),
-	(7,NULL,'','',NULL,'','',NULL);
+	(7,'ALLOVER LINEAR CAMOUFLAGE PADDED M65','Evisu','denim',354,'https://www.evisu.com/uk/allover-linear-camouflage-padded-m65-denim-jacket-2eahtm1dj201xxdq.html?color=INDIGO','https://cdn.evisucdn.com/media/catalog/product/cache/4f99427b83ce1ff251300d45eff85554/2/e/2eahtm1dj201xxdq-indw_5_ggv76ixxh3qdasrc.jpg','2022');
 
 /*!40000 ALTER TABLE `items` ENABLE KEYS */;
 UNLOCK TABLES;

@@ -3,10 +3,14 @@
  *
  * @return array of database entries with an associated values
  */
-function getDb(): array {
+function getDb(): object {
     $db = new PDO ('mysql:host=db; dbname=sami-collection','root', 'password');
     $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-    $query =  $db->prepare("SELECT `name`, `designer`, `style`, `year_released`, `image` FROM `items` ORDER BY `id`;");
+    return $db;
+}
+
+function dbSelection(object $db): array {
+    $query = $db->prepare("SELECT `name`, `designer`, `style`, `year_released`, `image` FROM `items` ORDER BY `id`;");
     $query->execute();
     $result = $query->fetchAll();
     return $result;
