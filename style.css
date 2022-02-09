@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+header {
+    text-align: center;
+    font-size: 3rem;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item {
+    text-align: center;
+    border: red solid 3px;
+    border-radius: 15px;
+    padding-top: 15px;
+    margin: 15px;
+    min-height: 500px;
+    height: 50vh;
+    width: 30vw;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media only screen and (max-width: 1200px ){
+    .item {
+        width: 45vw;
+    }
+
+}@media only screen and (max-width: 750px ){
+    header {
+        font-size: 2rem;
+    }
+
+    .item {
+        height: 100vh;
+        width: 100vw;
+    }
+}
+
+.image_wrap {
+    height: 60%;
+}
+
+.image {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.name {
+    font-family: Arial;
+    font-size: 3rem;
+    color: red;
+}
+
+.designer {
+    font-family: "Times New Roman";
+    font-size: 3rem;
+    color: #000;
+}
+
+.style {
+    font-family: Helvetica;
+    font-size: 3rem;
+    color: #000;
+}
+
+.year {
+    font-family: Beirut;
+    font-size: 5rem;
+    color: yellowgreen;
+}
+
+.empty {
+    font-family: Waseem;
+    color: greenyellow;
+    font-weight: bold;
+    font-size: 3rem;
+    word-spacing: 0.5rem;
+}
