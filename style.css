@@ -6,6 +6,11 @@ html {
     font-size: 62.5%;
 }
 
+header {
+    text-align: center;
+    font-size: 3rem;
+}
+
 main {
     display: flex;
     flex-wrap: wrap;
@@ -30,13 +35,17 @@ main {
     .item {
         width: 45vw;
     }
+
 }@media only screen and (max-width: 750px ){
+    header {
+        font-size: 2rem;
+    }
+
     .item {
         height: 100vh;
         width: 100vw;
     }
 }
-
 
 .image_wrap {
     height: 60%;
@@ -70,4 +79,12 @@ main {
     font-family: Beirut;
     font-size: 5rem;
     color: yellowgreen;
+}
+
+.empty {
+    font-family: Waseem;
+    color: greenyellow;
+    font-weight: bold;
+    font-size: 3rem;
+    word-spacing: 0.5rem;
 }

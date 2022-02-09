@@ -1,5 +1,5 @@
 <?php
-require '../db.php';
+require '../functions.php';
 use PHPUnit\Framework\TestCase;
 class dbTest extends TestCase {
     public function testSuccessLoop(){
