@@ -14,7 +14,7 @@ function getDb(): object {
  * @param object $db is a variable for the object derived from getDb
  * @return array of items from the array and their associated values
  */
-function dbSelection(object $db): array {
+function getAllJackets(PDO $db): array {
     $query = $db->prepare("SELECT `name`, `designer`, `style`, `year_released`, `image` FROM `items` ORDER BY `id`;");
     $query->execute();
     $result = $query->fetchAll();
