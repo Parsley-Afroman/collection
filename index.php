@@ -1,8 +1,7 @@
 <?php
 require_once 'functions.php';
 $db = getDb();
-$array = getItems($db);
-$items = arraySplit($array);
+$items = jacketMarkup($db);
 ?>
 <!DOCTYPE html>
 <html lang="en">
