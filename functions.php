@@ -3,7 +3,7 @@
  *
  * @return array of database entries with an associated values
  */
-function getDb(): object {
+function getDb(): PDO {
     $db = new PDO ('mysql:host=db; dbname=sami-collection','root', 'password');
     $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
     return $db;
