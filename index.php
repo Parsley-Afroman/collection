@@ -1,8 +1,8 @@
 <?php
 require_once 'functions.php';
 $db = getDb();
-$array = getItems($db);
-$items = arraySplit($array);
+$array = getAllJackets($db);
+$items = jacketMarkup($array);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,5 +21,14 @@ $items = arraySplit($array);
         <?php echo $items;
         ?>
     </main>
+        <footer>
+        <form name="add_jacket" method="post" action="directory.php">
+            <input name="jacket_name" type="text" placeholder="Jacket Name"> . <br>
+            <input name="jacket_designer" type="text" placeholder="Jacket Designer"> . <br>
+            <input name="jacket_style" type="text" placeholder="Jacket Style"> . <br>
+            <input name="jacket_year" type="number" placeholder="Jacket Year"> . <br>
+            <input type="submit" value="Add Jacket">
+        </form>
+    </footer>
 </body>
 </html>
